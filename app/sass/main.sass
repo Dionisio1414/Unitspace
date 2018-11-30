@@ -1,0 +1,68 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #BCBCBC
+
+::selection
+	background-color: #000
+	color: #fff
+
+a
+	outline: none
+html
+	overflow-x: hidden
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: #000
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+	&:focus
+		text-decoration: none
+	&:active
+		text-decoration: none		
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.clearfix::after
+	content: ""
+	clear: both
+	display: table
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right	
+
+.text-left
+	text-align: left
+
+b, strong
+	font-weight: bold
+
+
+
+
+@import "media"; // always at the end

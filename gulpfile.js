@@ -37,10 +37,7 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/bootstrap/bootstrap.min.js',
-		'app/libs/jqueryColor/jquery.color.js',
-		'app/libs/jscrollpane/jquery.jscrollpane.min.js',
-		'app/libs/jscrollpane/jquery.mousewheel.js',
+		'app/libs/materialize/js/bin/materialize.js',
 		'app/js/common.js' // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
