@@ -9,10 +9,6 @@
 	background-color: #000
 	color: #fff
 
-a
-	outline: none
-html
-	overflow-x: hidden
 body
 	font-size: 16px
 	min-width: 320px
@@ -27,16 +23,7 @@ body
 		&:focus:required:invalid
 			border-color: red
 		&:required:valid
-			border-color: green
-
-a
-	text-decoration: none
-	&:hover
-		text-decoration: none
-	&:focus
-		text-decoration: none
-	&:active
-		text-decoration: none		
+			border-color: green	
 
 .img-responsive
 	display: block
@@ -50,19 +37,104 @@ a
 	clear: both
 	display: table
 
-.text-center
-	text-align: center
-
-.text-right
-	text-align: right	
-
-.text-left
-	text-align: left
-
 b, strong
 	font-weight: bold
 
 
+// container-fluid
 
+.container
+	width: 100%
+	max-width: initial
 
-@import "media"; // always at the end
+// end container-fluid
+
+// FIRST SCREEN
+
+.main
+	position: relative
+	background-color: $header-background
+	height: 100vh
+	header
+		padding-top: 62px
+		height: 50%
+		nav
+			ul
+				text-align: center
+				li
+					display: inline-block
+					&:first-child
+						margin-left: 20%
+					&:not(:last-child)
+						margin-right: 55px
+					a
+						font-family: "ProximaNovaRegular", sans-serif
+						font-size: 16px
+						text-transform: uppercase
+						color: #fff
+	&__popup-message
+		float: right
+		img
+			width: 43px
+			height: 37px
+			margin-right: 38px
+	&__aside-left
+		position: absolute
+		top: 154px
+		left: 73px
+		width: 80px
+		.follow-us
+			position: relative
+			transform: rotate(90deg)
+			margin-right: 56px
+			margin-bottom: 112px
+			&::before
+				content: ""
+				position: absolute
+				left: -57px
+				top: -24px
+				background-color: #fff
+				width: 5px
+				height: 75px
+				transform: rotate(90deg)
+			a
+				font-family: "ProximaNovaBold", sans-serif
+				font-size: 13.6px
+				opacity: .5
+				text-transform: uppercase
+				white-space: nowrap
+				letter-spacing: 2.4px
+				color: #fff
+		.aside-item
+				margin-top: 36px
+				a
+					display: block
+					img
+						width: 19px
+						height: 19px
+	&__bottom-container
+		position: absolute
+		top: 700px
+		left: 100px
+		width: 100%
+		.header-caption
+			h1
+				font-family: "RalewayBold", sans-serif
+				font-size: 48px
+				color: #fff
+			h2
+				font-family: "RalewayBold", sans-serif
+				font-size: 36px
+				color: #fff
+			p
+				font-family: "ProximaNovaBold", sans-serif
+				font-size: 14.57px
+				opacity: .5
+				color: #fff
+	
+		
+	
+
+// END FIRST SCREEN
+
+@import "_media.sass"; // always at the end
