@@ -52,9 +52,12 @@ b, strong
 // FIRST SCREEN
 
 .main
+	background-image: url(../images/line_header.png)
+	background-size: cover
 	position: relative
 	background-color: $header-background
 	height: 100vh
+	//overflow: hidden
 	header
 		padding-top: 62px
 		height: 50%
@@ -72,8 +75,12 @@ b, strong
 						font-size: 16px
 						text-transform: uppercase
 						color: #fff
+						text-decoration: none
 	&__popup-message
 		float: right
+		z-index: 2 
+		&:hover
+			cursor: pointer
 		img
 			width: 43px
 			height: 37px
@@ -94,7 +101,7 @@ b, strong
 				left: -57px
 				top: -24px
 				background-color: #fff
-				width: 5px
+				width: 3px
 				height: 75px
 				transform: rotate(90deg)
 			a
@@ -105,6 +112,7 @@ b, strong
 				white-space: nowrap
 				letter-spacing: 2.4px
 				color: #fff
+				text-decoration: none
 		.aside-item
 				margin-top: 36px
 				a
@@ -112,28 +120,123 @@ b, strong
 					img
 						width: 19px
 						height: 19px
+	&__aside-right
+		position: absolute
+		top: 569px
+		right: 41px
+		width: 80px
+		z-index: 1
+		.scroll-link
+			position: relative
+			transform: rotate(90deg)
+			&::after
+				content: ""
+				position: absolute
+				bottom: 0
+				bottom: -26px
+				right: -41px
+				height: 75px
+				width: 3px
+				background-color: #fff
+				transform: rotate(90deg)
+			a
+				font-family: "ProximaNovaBold", sans-serif
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: 3px
+				opacity: .5
+				color: #fff
+				text-decoration: none
+	.language
+		position: absolute
+		right: 54px
+		bottom: 0
+		background-color: #363636
+		width: 60px
+		height: 150px
+		padding-top: 58px
+		padding-left: 13px
+		a
+			display: inline-block
+			font-family: "ProximaNovaBold", Arial, sans-serif
+			font-size: 16px
+			text-transform: uppercase
+			color: #fff
+			cursor: pointer
+			&:hover
+				text-decoration: none
+			img
+				width: 10px
+				transform: rotate(90deg)
+				vertical-align: middle
+			&:last-child
+				font-family: "RobotoNovaRegular", sans-serif
+				margin-top: 15px
+				display: none
+		
+	
 	&__bottom-container
 		position: absolute
 		top: 700px
-		left: 100px
 		width: 100%
 		.header-caption
+			margin-top: 77px
+			margin-left: 60px
 			h1
 				font-family: "RalewayBold", sans-serif
 				font-size: 48px
+				letter-spacing: -1.3px
+				margin-bottom: 22px
 				color: #fff
 			h2
 				font-family: "RalewayBold", sans-serif
 				font-size: 36px
+				letter-spacing: -1px
+				margin-top: 0
+				margin-bottom: 15px
 				color: #fff
 			p
 				font-family: "ProximaNovaBold", sans-serif
 				font-size: 14.57px
 				opacity: .5
+				letter-spacing: 2.8px
 				color: #fff
 	
-		
+	&__letter-left,		
+	&__letter-right
+		position: fixed
+		img
+			width: 250px
+	&__letter-left
+		left: -4px
+		bottom: -103px
+	&__letter-right
+		top: -68px
+		right: -52px
 	
+	// animation circle
+
+	.animation-circle
+		position: absolute
+		top: 25%
+		left: 50%
+		transform: translate(-51%, -16%)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #000
+		border-radius: 50%
+		width: 753.9px
+		height: 753.28px
+		img
+			width: 360px
+
+	// end animation circle
+
 
 // END FIRST SCREEN
 
