@@ -28,7 +28,7 @@ $(function() {
 	$circle.delay(6000).animate({
 		opacity: 1
 	}, 1000, function() {
-		$(this).find('img').animate({
+		$(this).find('.logo').animate({
 			opacity: 1
 		}, 500);
 		$(this).find('p').delay(300).animate({

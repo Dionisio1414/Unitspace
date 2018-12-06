@@ -48,7 +48,7 @@ b, strong
         filter: blur(1px)
     
     100% 
-     	filter: blur(3px)
+     	 filter: blur(3px)
 	
 @keyframes noise 
     0%,
@@ -87,6 +87,17 @@ b, strong
 		opacity: 0
 	100%
 		opacity: 1
+
+@keyframes spin1
+	100%
+		transform: rotate(360deg)
+
+@keyframes spin2
+	100%
+		transform: rotate(-360deg)
+
+.st:first-child .blur
+	filter: url(#blur)	
 
 
 .coming-soon
@@ -139,9 +150,66 @@ b, strong
 		width: 753.9px
 		height: 753.28px
 		opacity: 0
-		img
-			width: 360px
-			opacity: 0
+		.logo
+			position: absolute
+			top: 38%
+			left: 20%
+			&__planet1,
+			&__planet2
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 1
+				width: 140px
+				height: 140px
+				border: 5px solid #fff
+				border-radius: 50%
+			&__planet1-inner,
+			&__planet2-inner
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				width: 125px
+				height: 125px
+				margin: 0 auto
+			&__planet1-inner
+				animation: spin1 20s 1.5s linear infinite
+				&::before
+					content: ""
+					position: absolute
+					width: 30px
+					height: 30px
+					top: 0
+					left: 0
+					background-color: #fff
+					border-radius: 50%
+			&__planet2-inner
+				animation: spin2 10s 1.5s linear infinite
+				width: 117px
+				height: 117px
+				&::before
+					content: ""
+					position: absolute
+					width: 20px
+					height: 20px
+					top: 0
+					background-color: #fff
+					border-radius: 50%
+		.logo-text
+			position: absolute
+			top: 30%
+			left: 43%
+			p
+				width: 300px
+			svg
+				width: 300px
+				g
+					animation: blur-text 2.5s 0.2s infinite linear alternate
+					
+				
+				
 		.loading
 			filter: blur(0px)
 			position: absolute
