@@ -36,4 +36,17 @@ $(function() {
 		}, 400);
 	});
 	
+	
+	// MAIN PAGES
+	
+	$('.clients__slider').slick();
+	
+	var $spriteContainer = $('.clients__slider .hover-container');
+	var $imgHeight = $spriteContainer.find('img');
+	$imgHeight.each(function(i) {
+		var $currentHeight = Math.round($(this).height());
+		$spriteContainer.eq(i).height($currentHeight / 2);
+	});
+	
+	
 });

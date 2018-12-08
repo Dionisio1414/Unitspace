@@ -284,10 +284,11 @@ b, strong
 	position: relative
 	background-color: $header-background
 	height: 100vh
-	//overflow: hidden
+	overflow: hidden
 	header
 		padding-top: 62px
 		height: 50%
+		position: relative
 		nav
 			ul
 				text-align: center
@@ -383,6 +384,7 @@ b, strong
 		height: 150px
 		padding-top: 58px
 		padding-left: 13px
+		z-index: 1
 		a
 			display: inline-block
 			font-family: "ProximaNovaBold", Arial, sans-serif
@@ -432,6 +434,7 @@ b, strong
 	&__letter-left,		
 	&__letter-right
 		position: absolute
+		pointer-events: none
 		img
 			width: 250px
 	&__letter-left
@@ -440,12 +443,19 @@ b, strong
 	&__letter-right
 		top: -68px
 		right: -52px
+	&__right-background
+		position: absolute
+		top: 0
+		right: 0
+		width: 50vw	
+		pointer-events: none
+		z-index: 0
 	
 	// animation circle
 
 	.animation-circle
 		position: absolute
-		top: 25%
+		top: 290px
 		left: 50%
 		transform: translate(-51%, -16%)
 		display: -webkit-flex
@@ -459,6 +469,7 @@ b, strong
 		border-radius: 50%
 		width: 753.9px
 		height: 753.28px
+		z-index: 1
 		img
 			width: 360px
 
@@ -484,15 +495,82 @@ b, strong
 		height: 3px
 		background-color: #C2C2C2
 
+.pd-0
+	padding: 0!important
+
+//.bg-lines
+//	background-image: url(../images/line_other.png)
+//	background-repeat: repeat-y
+
 
 // SECTION SERVICES
-
-
-
 .services
+	background-image: url(../images/line_other.png)
+	background-repeat: repeat-y
+	background-size: cover
 	height: 100vh
+	.card
+		position: relative
+		background-image: url(../images/us-services/services-1.png)
+		background-repeat: no-repeat
+		background-size: cover
+		background-color: #000
+		padding-bottom: 100px
+		height: 775px
+		&__num
+			font-family: "ProximaNovaExtraBold", sans-serif
+			font-size: 36px
+			position: absolute
+			top: 15px
+			left: 25px
+			color: #fff
+		.card-content
+			padding-left: 100px
+			.card-title
+				font-family: "ProximaNovaSemibold", Arial, sans-serif
+				font-size: 36px
+				padding-right: 200px
+				line-height: 45px
+				margin-top: 260px
+				margin-bottom: 35px
+				
+			ul
+				li
+					font-family: "ProximaNovaRegular", Arial, sans-serif
+					font-size: 20px
+					color: #fff
+		img
+			position: absolute
+	
+	.second-card
+		background-image: url(../images/us-services/services-2.png)
+		top: 70px
+	.third-card
+		background-image: url(../images/us-services/services-3.png)
+		top: 140px
+	.four-card
+		background-image: url(../images/us-services/services-4.png)
+		top: 210px
 	
 
 // END SECTION SERVICES
+
+
+// SECTION CLIENTS
+
+.clients
+	height: 100vh
+	h1.top-caption
+		margin-top: 400px
+		margin-bottom: 140px
+	&__slider
+		.hover-container
+			display: inline-block
+			overflow: hidden
+			outline: none
+			img
+				width: 250px
+
+// ENDSECTION CLIENTS 
 
 @import "_media.sass"; // always at the end
