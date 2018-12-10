@@ -187,8 +187,8 @@ b, strong
 					border-radius: 50%
 			&__planet2-inner
 				animation: spin2 10s 1.5s linear infinite
-				width: 117px
-				height: 117px
+				width: 102px
+				height: 124px
 				&::before
 					content: ""
 					position: absolute
@@ -199,7 +199,7 @@ b, strong
 					border-radius: 50%
 		.logo-text
 			position: absolute
-			top: 30%
+			top: 36%
 			left: 43%
 			p
 				width: 300px
@@ -223,26 +223,26 @@ b, strong
 				display: inline-block
 				margin: 0 1px
 				&:nth-child(1)
-					 animation: blur-text 2.5s 0s infinite linear alternate
+					 animation: blur-text 1.5s 0s infinite linear alternate
 				&:nth-child(2)
-					 animation: blur-text 2.5s 0.2s infinite linear alternate
+					 animation: blur-text 1.5s 0.2s infinite linear alternate
 				&:nth-child(3)
-					 animation: blur-text 2.5s 0.4s infinite linear alternate
+					 animation: blur-text 1.5s 0.4s infinite linear alternate
 				&:nth-child(4)
-					 animation: blur-text 2.5s 0.6s infinite linear alternate
+					 animation: blur-text 1.5s 0.6s infinite linear alternate
 				&:nth-child(5)
-					 animation: blur-text 2.5s 0.8s infinite linear alternate
+					 animation: blur-text 1.5s 0.8s infinite linear alternate
 				&:nth-child(6)
-					animation: blur-text 2.5s 1s infinite linear alternate
+					animation: blur-text 1.5s 1s infinite linear alternate
 					margin-right: 20px
 				&:nth-child(7)
-					 animation: blur-text 2.5s 1.2s infinite linear alternate
+					 animation: blur-text 1.5s 1.2s infinite linear alternate
 				&:nth-child(8)
-					 animation: blur-text 2.5s 1.4s infinite linear alternate
+					 animation: blur-text 1.5s 1.4s infinite linear alternate
 				&:nth-child(9)
-					 animation: blur-text 2.5s 1.6s infinite linear alternate
+					 animation: blur-text 1.5s 1.6s infinite linear alternate
 				&:nth-child(10)
-					animation: blur-text 2.5s 1.8s infinite linear alternate
+					animation: blur-text 1.5s 1.8s infinite linear alternate
 				&:nth-child(11)
 					animation: loaded 1.5s 2s infinite linear alternate
 				&:nth-child(12)
@@ -285,6 +285,7 @@ b, strong
 	background-color: $header-background
 	height: 100vh
 	overflow: hidden
+
 	header
 		padding-top: 62px
 		height: 50%
@@ -294,8 +295,6 @@ b, strong
 				text-align: center
 				li
 					display: inline-block
-					&:first-child
-						margin-left: 20%
 					&:not(:last-child)
 						margin-right: 55px
 					a
@@ -304,6 +303,20 @@ b, strong
 						text-transform: uppercase
 						color: #fff
 						text-decoration: none
+		.logo-fixed
+			display: block
+			margin: 0 auto
+			margin-top: -18px
+			width: 20%
+			opacity: 0
+	header.fixed
+		background-color: rgba(#000,.5)
+		position: fixed
+		width: 100%
+		z-index: 5
+		height: 150px
+		transition: all .5s ease
+
 	&__popup-message
 		float: right
 		z-index: 2 
@@ -573,4 +586,4 @@ b, strong
 
 // ENDSECTION CLIENTS 
 
-@import "_media.sass"; // always at the end
+@import "_media.sass" // always at the end

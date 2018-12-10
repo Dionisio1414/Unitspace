@@ -1,19 +1,124 @@
-// >= 1200px
-@media #{$extra-large-and-up} 
-
-// > 992px 
-
-@media #{$large-and-down} 
+//// >= 1200px
+//@media #{$extra-large-and-up} 
+//
+//// > 992px 
+//
+//@media #{$large-and-down} 
+//
+//  
+////	> 601px
+//
+//@media #{$medium-and-down} 
+//
+//	
+//// <= 600
+//@media #{$small-and-down} 
 
   
-//	> 601px
+  
 
-@media #{$medium-and-down} 
-
+@media screen and (max-width: 992px) 
+	.coming-soon 
+		.animation-circle
+			width: 630.9px
+			height: 630.28px
+			.logo-text
+				top: 37%
+				left: 46%
+				svg
+					width: 240px
+			.loading
+				font-size: 26px
+		&__letter-left img, 
+		&__letter-right img
+			width: 200px
 	
-// <= 600
-@media #{$small-and-down} 
+	
+@media screen and (max-width: 768px)
+	.coming-soon 
+		.animation-circle
+			width: 540px
+			height: 540px
+			.logo
+				top: 42%
+				left: 17%
+				&__planet1,
+				&__planet2
+					width: 100px
+					height: 100px
+					
+			.logo-text
+				top: 40%
+				left: 42%
+				svg
+					width: 215px
+			.loading
+				font-size: 26px
+			.logo__planet1-inner,
+				width: 90px
+				height: 90px
+			.logo__planet2-inner
+				width: 80px
+				height: 87px
+		&__letter-left img, 
+		&__letter-right img
+			width: 145px
+		&__letter-right
+			right: -26px
+			top: -44px
+		&__letter-left
+			bottom: -68px
+			left: -6px
 
-  
-  
-          
+@media screen and (max-width: 567px) 
+	.coming-soon 
+		background-size: contain
+		.animation-circle
+			width: 400px
+			height: 400px
+			.logo-text
+				svg
+					width: 150px
+			.loading
+				font-size: 18px
+			.logo
+				top: 38%
+				left: 14%
+	
+@media screen and (max-width: 425px)
+	.coming-soon 
+		.animation-circle
+			top: 35%
+			width: 310px
+			height: 310px
+			.logo__planet1,
+			.logo__planet2
+				width: 70px
+				height: 70px
+				border-width: 2px
+			.logo__planet1-inner
+				width: 55px
+				height: 64px
+				&::before
+					width: 12px
+					height: 12px
+			.logo__planet2-inner
+				width: 60px
+				height: 67px
+			.logo-text
+				svg
+					width: 115px
+			.loading
+				font-size: 14px
+			.logo
+				top: 38%
+				left: 14%
+		&__letter-left img, 
+		&__letter-right img
+			width: 120px
+		.bg
+			top: 0
+			left: 0
+			width: 100%
+	
+	
