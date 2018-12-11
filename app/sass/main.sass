@@ -310,7 +310,7 @@ b, strong
 			width: 20%
 			opacity: 0
 	header.fixed
-		background-color: rgba(#000,.5)
+		background-color: rgba(#000,.8)
 		position: fixed
 		width: 100%
 		z-index: 5
@@ -405,8 +405,7 @@ b, strong
 			text-transform: uppercase
 			color: #fff
 			cursor: pointer
-			&:hover
-				text-decoration: none
+			text-decoration: none
 			img
 				width: 10px
 				transform: rotate(90deg)
@@ -572,6 +571,8 @@ b, strong
 // SECTION CLIENTS
 
 .clients
+	background-image: url(../images/line_other.png)
+	background-size: cover
 	height: 100vh
 	h1.top-caption
 		margin-top: 400px
@@ -584,6 +585,86 @@ b, strong
 			img
 				width: 250px
 
-// ENDSECTION CLIENTS 
+// END SECTION CLIENTS 
+
+
+// Section Projects
+
+.projects
+	position: relative
+	height: 100vh
+	width: 100vw
+	margin-top: 400px
+	padding-top: 300px
+	&__letter-left
+		position: absolute
+		top: 0
+		left: -55px
+		opacity: .4
+		img
+			width: 230px
+	&__left-part
+		width: 50vw
+		position: absolute
+		top: 0
+		left: 0
+		width: 50vw
+		.top-caption
+			margin-top: 140px
+		h2
+			font-family: "ProximaNovaSemiBold", sans-serif
+			font-size: 36px
+			margin-top: 0
+		.project-number
+			font-family: "ProximaNovaExtraBold", sans-serif 
+			font-size: 36px
+			margin-left: 40px
+			color: #000000
+		a.go-to-site
+			display: inline-block
+			font-family: "ProximaNovaSemiBold", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			text-decoration: none
+			letter-spacing: 3px
+			padding: 10px 20px
+			border: 2px solid #000
+			color: #000
+			img
+				width: 20px
+				vertical-align: middle
+				margin-left: 30px
+	&__right-part
+		background-color: #000
+		position: absolute
+		top: 0
+		right: 0
+		width: 50vw
+		min-height: 100%
+		.row
+			margin-bottom: 0
+			.project-container
+				position: relative
+				background-color: #202020
+				border-bottom: 7px solid #fff
+				width: 750px
+				height: 430px
+				.logo
+					position: absolute
+					top: 45%
+					left: 50%
+					transform: translate(-50%)
+					width: 51px
+					height: 51px
+				.redirect-link
+					position: absolute
+					bottom: 30px
+					right: 45px
+					img
+						width: 25px
+			.project:first-child
+				margin-top: 400px
+	
+ // End Projects
 
 @import "_media.sass" // always at the end

@@ -50,16 +50,16 @@ $(function() {
 	
 	$(window).scroll(function() {
 		var $hdr = $('header'), $logo = $hdr.find('.logo-fixed');
-		if($(this).scrollTop() > 1) {
+		if($(this).scrollTop() > 10) {
 			$hdr.addClass('fixed');
-			$logo.animate({
+			$logo.show().animate({
 				opacity: 1
 			}, 500);
 		} else {
 			$hdr.removeClass('fixed');
-			$logo.animate({
+			$logo.hide().animate({
 				opacity: 0
-			}, 400);
+			});
 		}
 	});
 	
