@@ -285,7 +285,6 @@ b, strong
 	background-color: $header-background
 	height: 100vh
 	overflow: hidden
-
 	header
 		padding-top: 62px
 		height: 50%
@@ -519,8 +518,8 @@ b, strong
 .services
 	background-image: url(../images/line_other.png)
 	background-repeat: repeat-y
-	background-size: cover
-	height: 100vh
+	background-size: contain
+	height: 100%
 	.card
 		position: relative
 		background-image: url(../images/us-services/services-1.png)
@@ -574,28 +573,37 @@ b, strong
 	background-image: url(../images/line_other.png)
 	background-size: cover
 	height: 100vh
+	margin-bottom: 190px
 	h1.top-caption
 		margin-top: 400px
 		margin-bottom: 140px
 	&__slider
+		.row
+			margin-bottom: 0
+			border-bottom: 2px solid #BEBEBE
+			&:first-child
+				border-top: 2px solid #BEBEBE
+			.col:not(:last-child)
+				border-right: 2px solid #BEBEBE
 		.hover-container
 			display: inline-block
 			overflow: hidden
 			outline: none
-			img
-				width: 250px
+			width: 250px
+			height: 250px
+			//img
+				width: 500px
 
 // END SECTION CLIENTS 
 
 
 // Section Projects
 
+
 .projects
 	position: relative
 	height: 100vh
-	width: 100vw
-	margin-top: 400px
-	padding-top: 300px
+	margin-bottom: 100%
 	&__letter-left
 		position: absolute
 		top: 0
@@ -609,12 +617,17 @@ b, strong
 		top: 0
 		left: 0
 		width: 50vw
+		.row
+			margin-bottom: 330px
+			&:first-child
+				margin-bottom: 87px
 		.top-caption
-			margin-top: 140px
+			margin-top: 330px
 		h2
 			font-family: "ProximaNovaSemiBold", sans-serif
 			font-size: 36px
 			margin-top: 0
+			margin-left: 80px
 		.project-number
 			font-family: "ProximaNovaExtraBold", sans-serif 
 			font-size: 36px
@@ -630,6 +643,7 @@ b, strong
 			padding: 10px 20px
 			border: 2px solid #000
 			color: #000
+			margin-left: 80px
 			img
 				width: 20px
 				vertical-align: middle
@@ -639,7 +653,8 @@ b, strong
 		position: absolute
 		top: 0
 		right: 0
-		width: 50vw
+		width: 50.1%
+		padding: 395px 0
 		min-height: 100%
 		.row
 			margin-bottom: 0
@@ -660,11 +675,53 @@ b, strong
 					position: absolute
 					bottom: 30px
 					right: 45px
+					display: inline-block
+					cursor: pointer
 					img
 						width: 25px
 			.project:first-child
 				margin-top: 400px
 	
  // End Projects
+
+// Section team
+
+
+.team
+	position: absolute
+	margin-top: 400px
+	&__description
+		font-family: "ProximaNovaRegular", sans-serif
+		font-size: 18px
+		padding-right: 50%
+		margin-bottom: 60px
+	.top-caption
+		margin-top: 0
+	&__main-worker
+		float: right
+		width: 500px
+		height: 500px
+		filter: grayscale(100%)
+		transition: filter .5s ease
+		&:hover
+			filter: grayscale(0%)
+	&__worker
+		background-color: #F2F2F2
+		width: 250px
+		height: 250px
+		filter: grayscale(100%)
+		transition: filter .5s ease
+		&:hover
+			filter: grayscale(0%)
+	.container:nth-child(2)
+		.row:nth-child(1)
+			.col:nth-child(2)
+				.team__worker
+					float: right
+					&:last-child
+						clear: both
+						margin-right: 250px	
+				
+// End section team
 
 @import "_media.sass" // always at the end

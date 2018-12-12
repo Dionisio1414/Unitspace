@@ -39,6 +39,18 @@ $(function() {
 	
 	// MAIN PAGES
 	
+	/* ALL SECTIONS */
+	console.log('window' + $(window).width());
+	
+	var $sections = $('section');
+	$sections.each(function(i) {
+		var $sectionHeight = $(this).outerHeight() + "px";
+		$(this).css('min-height', $sectionHeight);
+		console.log($sectionHeight);
+		console.log($(this));
+	});
+	
+	
 	/* HEADER */
 	
 	$('.main .language a').click(function() {
@@ -68,12 +80,29 @@ $(function() {
 	
 	$('.clients__slider').slick();
 	
-	var $spriteContainer = $('.clients__slider .hover-container');
-	var $imgHeight = $spriteContainer.find('img');
-	$imgHeight.each(function(i) {
-		var $currentHeight = Math.round($(this).height());
-		$spriteContainer.eq(i).height($currentHeight / 2);
-	});
+		var $spriteContainer = $('.clients__slider .hover-container');
+		var $imgWidth = $spriteContainer.find('img');
+		$imgWidth.each(function(i) {
+			var $currentWidth = Math.round($(this).width());
+			$spriteContainer.eq(i).width($currentWidth / 2);
+		});
+	
+		var $hoverLogo = $('.hover-container');
+		console.log($hoverLogo);
+		$hoverLogo.hover(function() {
+			$(this).css('background-position: -385px 0px');
+		});
+	
+	/* Projects */
+	
+//	var $projectCards = $('.projects__right-part .row .project-container');
+//	$projectCards.each(function(i) {
+//		console.log(i);
+//		if(i % 2 == 0) {
+//			$(this).width(500);
+//		}
+//	})
+	
 	
 	
 });
