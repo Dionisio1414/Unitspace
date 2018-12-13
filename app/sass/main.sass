@@ -17,6 +17,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: #000
+	height: 100%
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -279,6 +280,9 @@ b, strong
 // FIRST SCREEN
 
 .main
+	position: absolute
+	top: 0
+	left: 0
 	background-image: url(../images/line_header.png)
 	background-size: cover
 	position: relative
@@ -688,8 +692,7 @@ b, strong
 
 
 .team
-	position: absolute
-	margin-top: 400px
+	position: relative
 	&__description
 		font-family: "ProximaNovaRegular", sans-serif
 		font-size: 18px
@@ -698,30 +701,116 @@ b, strong
 	.top-caption
 		margin-top: 0
 	&__main-worker
-		float: right
-		width: 500px
-		height: 500px
+		position: relative
+		width: 26.041666666666668vw
+		height: 26.041666666666668vw
+		margin: 0 auto
 		filter: grayscale(100%)
 		transition: filter .5s ease
+		overflow: hidden
 		&:hover
 			filter: grayscale(0%)
+		.overlay
+			background-image: url(../images/hover-ovarlay.png);
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			p
+				margin-bottom: 0
+				color: #fff
+			.name
+				position: absolute
+				bottom: 50px
+				left: 32px
+				font-family: "ProximaNovaBold", sans-serif
+				font-size: 20px
+			.position
+				position: absolute
+				bottom: 20px
+				left: 32px
+				font-family: "ProximaNovaRegular", sans-serif
+				font-size: 18px
+	
 	&__worker
 		background-color: #F2F2F2
-		width: 250px
-		height: 250px
+		width: 13.020833333333334vw
+		height: 13.020833333333334vw
 		filter: grayscale(100%)
 		transition: filter .5s ease
 		&:hover
 			filter: grayscale(0%)
+	&__worker-black
+		background-color: #000
+		width: 13.020833333333334vw
+		height: 13.020833333333334vw
+		filter: grayscale(100%)
+		transition: filter .5s ease
+		&:hover
+			filter: grayscale(0%)
+		
 	.container:nth-child(2)
+		.col
+			padding: 0
+		.row
+			margin-bottom: 0
 		.row:nth-child(1)
 			.col:nth-child(2)
 				.team__worker
 					float: right
 					&:last-child
 						clear: both
-						margin-right: 250px	
+						margin-right: 13.020833333333334vw
+			.col:nth-child(3)
+				.team__worker
+					float: right
+					margin-right: 13.020833333333334vw
+					&:last-child
+						margin-right: 0
+						clear: both
+		.row:nth-child(2)
+			.col:nth-child(2)
+				.team__worker
+					float: left
+					&:last-child
+						float: right
+			.col:nth-child(3)
+				.team__worker
+					float: right
+		.row:nth-child(3)
+			.col:nth-child(1)
+				.team__worker
+					float: right
+			.col:nth-child(2)
+				.team__worker
+					float: right
+				.team__worker-black
+					clear: both
+			.team__main-worker
+				margin: 0
+		
 				
 // End section team
+
+
+// section technology
+
+.technology
+	position: relative
+	background-color: #000
+	height: 100%
+	.top-caption
+		color: #fff
+	&__background
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		
+// end section technology
 
 @import "_media.sass" // always at the end
