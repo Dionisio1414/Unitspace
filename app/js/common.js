@@ -42,13 +42,13 @@ $(function() {
 	/* ALL SECTIONS */
 	console.log('window' + $(window).width());
 	
-	var $sections = $('section');
-	$sections.each(function(i) {
-		var $sectionHeight = $(this).outerHeight() + "px";
-		$(this).css('min-height', $sectionHeight);
-		console.log($sectionHeight);
-		console.log($(this));
-	});
+//	var $sections = $('section');
+//	$sections.each(function(i) {
+//		var $sectionHeight = $(this).outerHeight() + "px";
+//		$(this).css('min-height', $sectionHeight);
+//		console.log($sectionHeight);
+//		console.log($(this));
+//	});
 	
 	
 	/* HEADER */

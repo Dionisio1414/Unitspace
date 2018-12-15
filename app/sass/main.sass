@@ -470,6 +470,7 @@ b, strong
 		width: 50vw	
 		pointer-events: none
 		z-index: 0
+		opacity: .75
 	
 	// animation circle
 
@@ -490,7 +491,7 @@ b, strong
 		width: 753.9px
 		height: 753.28px
 		z-index: 1
-		img
+		.logo
 			width: 360px
 
 	// end animation circle
@@ -580,13 +581,18 @@ b, strong
 
 .clients
 	background-image: url(../images/line_other.png)
-	background-size: cover
-	height: 100vh
-	margin-bottom: 190px
+	background-size: contain
+	height: 100%
+	.container
+		.row
+			&:last-child
+				margin-bottom: 0
 	h1.top-caption
 		margin-top: 400px
 		margin-bottom: 140px
 	&__slider
+		.slick-track
+			height: 523px
 		.row
 			margin-bottom: 0
 			border-bottom: 2px solid #BEBEBE
@@ -611,8 +617,8 @@ b, strong
 
 .projects
 	position: relative
-	height: 100vh
-	margin-bottom: 100%
+	height: 100%
+	margin-bottom: 160%
 	&__letter-left
 		position: absolute
 		top: 0
