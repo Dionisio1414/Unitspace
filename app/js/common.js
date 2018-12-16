@@ -56,6 +56,8 @@ $(function() {
 //			 scrollTop : nt 
 //		 } , 500);  
 //	} );
+	
+	
 
 	
 	/* HEADER */
@@ -80,6 +82,17 @@ $(function() {
 				opacity: 0
 			});
 		}
+	});
+	
+	// main popup form
+	
+	var $iconEvent = $('.main__popup-message img'), $contactForm = $('.main__contact-form');
+	var $closeButton = $contactForm.find('.close-btn');
+	$iconEvent.click(function() {
+		$contactForm.fadeIn();
+	});
+	$closeButton.click(function() {
+		$contactForm.fadeOut();
 	});
 	
 	

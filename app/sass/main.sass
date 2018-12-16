@@ -474,6 +474,7 @@ b, strong
 	// popup contact form
 
 	&__contact-form
+		display: none
 		background-color: #000
 		position: absolute
 		top: 0
@@ -483,6 +484,10 @@ b, strong
 		height: 100%
 		padding: 40px 72px
 		z-index: 10
+		.container
+			.row
+				&:first-child
+					margin-bottom: 10px
 		.logo
 			img
 				width: 108px
@@ -493,28 +498,130 @@ b, strong
 				width: 25px
 		.form-container
 			width: 620px
+			float: right
 			h1
 				position: relative
 				font-family: "ProximaNovaSemibold", sans-serif
 				font-size: 36px
 				text-transform: uppercase
-				margin-left: 95px
+				margin-top: 0
+				margin-left: 145px
 				margin-bottom: 90px
 				color: #fff
 				&::before
 					content: ""
 					position: absolute
 					top: 17px
-					left: -95px
+					left: -145px
 					background-color: #fff
 					width: 45px
 					height: 4px
-			 .input-field 
+			.input-field 
 				label
 					font-family: "ProximaNovaExtraBold", sans-serif
 					font-size: 36px
 					transform: translateY(-10%)
 					opacity: .6
+					&.active
+						transform: translateY(-60%) scale(.7)
+				input
+					font-family: "ProximaNovaRegular", sans-serif
+					font-size: 18px
+					border-bottom: 1px solid #fff
+					margin-bottom: 15px
+					color: #fff
+			.input-textarea
+				margin-bottom: 35px
+				label
+					font-family: "ProximaNovaExtraBold", sans-serif
+					font-size: 24px
+					opacity: .6
+				textarea
+					border: none
+					border-bottom: 1px solid #fff
+					resize: none
+					height: 185px
+					color: #fff
+			.submit-btn
+				background-color: #fff
+				font-family: "ProximaNovaSemibold", sans-serif
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: 3px
+				padding: 15px 30px
+				text-align: center
+				white-space: nowrap
+				color: #000
+				img
+					width: 20px
+					margin-left: 20px
+					margin-bottom: 1px
+					vertical-align: middle
+			.file-upload
+				position: relative
+				float: right
+				overflow: hidden
+				border: 1px solid #fff
+				width: 227px
+				height: 55px
+				margin-top: 2px
+				color: #e9ecf2
+				text-align: center
+				label
+					display: block!important
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					cursor: pointer
+					i
+						vertical-align: middle
+						font-size: 17px
+						margin-left: 25px
+				input[type=file]
+					display: none
+				span
+					display: inline-block
+					font-family: "ProximaNovaRegular", sans-serif
+					font-size: 16px
+					line-height: 36px
+					margin-top: 5px
+					color: #9ca2b4
+			.socials
+				text-align: center
+				li
+					display: inline-block
+					margin-right: 35px
+					&:last-child
+						margin-right: 0
+					a
+						img
+							width: 20px
+		.form-description
+			position: absolute
+			right: 96px
+			top: 500px
+			.info-item
+				text-align: right
+				margin-bottom: 50px
+				h4
+					font-family: "ProximaNovaBold", sans-serif
+					font-size: 24px
+					text-transform: uppercase
+					letter-spacing: 3px
+					margin-bottom: 5px
+					color: #fff
+				p
+					font-family: "ProximaNovaLight", sans-serif
+					font-size: 24px
+					opacity: .6
+					margin: 0
+					color: #fff
+					a
+						text-decoration: none
+						color: #fff
+	
 	
 	// end popup contact form
 	
