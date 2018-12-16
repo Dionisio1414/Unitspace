@@ -471,6 +471,52 @@ b, strong
 		pointer-events: none
 		z-index: 0
 		opacity: .75
+	// popup contact form
+
+	&__contact-form
+		background-color: #000
+		position: absolute
+		top: 0
+		left: 0
+		opacity: .95
+		width: 100%
+		height: 100%
+		padding: 40px 72px
+		z-index: 10
+		.logo
+			img
+				width: 108px
+				height: 71px
+		.close-btn
+			float: right
+			img
+				width: 25px
+		.form-container
+			width: 620px
+			h1
+				position: relative
+				font-family: "ProximaNovaSemibold", sans-serif
+				font-size: 36px
+				text-transform: uppercase
+				margin-left: 95px
+				margin-bottom: 90px
+				color: #fff
+				&::before
+					content: ""
+					position: absolute
+					top: 17px
+					left: -95px
+					background-color: #fff
+					width: 45px
+					height: 4px
+			 .input-field 
+				label
+					font-family: "ProximaNovaExtraBold", sans-serif
+					font-size: 36px
+					transform: translateY(-10%)
+					opacity: .6
+	
+	// end popup contact form
 	
 	// animation circle
 
@@ -491,9 +537,27 @@ b, strong
 		width: 753.9px
 		height: 753.28px
 		z-index: 1
+		overflow: hidden
 		.logo
 			width: 360px
-
+		&__one
+			position: absolute
+			top: -250px
+			right: 0
+			transform: rotate(-45deg)
+			width: 300px
+		&__two
+			position: absolute
+			top: -309px
+			right: 412px
+			transform: rotate(-92deg)
+			width: 500px					
+		&__third
+			position: absolute
+			top: -309px
+			right: 412px
+			transform: rotate(-92deg)
+			width: 500px
 	// end animation circle
 
 
@@ -592,7 +656,7 @@ b, strong
 		margin-bottom: 140px
 	&__slider
 		.slick-track
-			height: 523px
+			height: 623px
 		.row
 			margin-bottom: 0
 			border-bottom: 2px solid #BEBEBE
@@ -604,10 +668,15 @@ b, strong
 			display: inline-block
 			overflow: hidden
 			outline: none
-			width: 250px
-			height: 250px
-			//img
-				width: 500px
+			width: auto
+			height: 300px
+			filter: grayscale(100%)
+			transition: filter .5s ease-in-out
+			&:hover
+				filter: grayscale(0%)
+			img
+				width: 280px
+				margin: 50px auto
 
 // END SECTION CLIENTS 
 
@@ -616,6 +685,8 @@ b, strong
 
 
 .projects
+	background-image: url(../images/line_other.png)
+	background-size: contain
 	position: relative
 	height: 100%
 	margin-bottom: 160%
@@ -704,6 +775,7 @@ b, strong
 
 .team
 	position: relative
+	margin-bottom: 400px
 	&__description
 		font-family: "ProximaNovaRegular", sans-serif
 		font-size: 18px
@@ -722,7 +794,8 @@ b, strong
 		&:hover
 			filter: grayscale(0%)
 		.overlay
-			background-image: url(../images/hover-ovarlay.png);
+			background-image: url(../images/hover-ovarlay.png)
+			background-position: 0 15px
 			position: absolute
 			top: 0
 			left: 0
@@ -778,12 +851,17 @@ b, strong
 			.col:nth-child(3)
 				.team__worker
 					float: right
-					margin-right: 13.020833333333334vw
+					margin-right: 12vw
 					&:last-child
 						margin-right: 0
 						clear: both
 		.row:nth-child(2)
 			.col:nth-child(2)
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
 				.team__worker
 					float: left
 					&:last-child
@@ -890,7 +968,7 @@ b, strong
 			font-size: 36px
 			text-transform: uppercase
 			margin-left: 95px
-			margin-bottom: 140px
+			margin-bottom: 90px
 			color: #202020
 			&::before
 				content: ""
@@ -976,22 +1054,23 @@ b, strong
 						margin-left: 25px
 		.form-description
 			position: absolute
-			top: -41px
-			right: -41px
+			top: -55px
+			right: -55px
 			background-color: #0E0E0E
 			width: 640px
-			height: 1070px
+			height: 1050px
 			padding: 70px 105px
+			padding-right: 20px
 			opacity: .99
 			h1
 				font-family: "ProximaNovaSemibold", sans-serif
 				font-size: 36px
 				text-transform: uppercase
 				margin-top: 83px
-				margin-bottom: 160px
+				margin-bottom: 100px
 				color: #fff
 			.info-item
-				margin-bottom: 70px
+				margin-bottom: 50px
 				h3
 					font-family: "ProximaNovaBold", sans-serif
 					font-size: 24px
@@ -1003,13 +1082,21 @@ b, strong
 					font-family: "ProximaNovaLight", sans-serif
 					font-size: 24px
 					opacity: .6
-					margin-bottom: 0
+					margin: 0
 					color: #fff
 					a
 						color: #fff
 				&:last-child
 					margin-bottom: 0
-				
+			.socials
+				li
+					margin-right: 35px
+					display: inline-block
+					&:last-child
+						margin-right: 0
+					a
+						img
+							width: 20px
 	
 // end section contacts	
 		
