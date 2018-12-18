@@ -277,17 +277,63 @@ b, strong
 
 // end container-fluid
 
+
+// lines columns
+.v-lines
+	position: absolute
+	left: 50%
+	top: 0
+	width: 100%
+	height: 100%
+	transform: translate(-50%)
+	pointer-events: none
+	&__outer,
+	&__inner
+		position: absolute
+		top: 0
+		height: 100%
+		border-left: 1px solid rgba(#464646,.5)
+		border-right: 1px solid rgba(#464646,.5)
+		margin: 0 auto
+		z-index: 1
+	&__outer
+		border: none
+	&__inner.light
+		border-left: .5px solid rgb(225,225,225)
+		border-right: .5px solid rgb(225,225,225)
+	&__top-line
+		position: absolute
+		top: 50%
+		width: 100%
+		height: 1px
+		background-color: rgba(#464646,.5)
+		margin: auto 0
+		z-index: 1
+	&__outer
+		width: 100%
+	&__inner
+		width: 500px
+	&__inner:nth-child(2)
+		left: 500px
+	&__inner:nth-child(3)
+		left: 1000px
+	&__inner:nth-child(4)
+		left: 1500px
+
+
+// end lines columns
+
 // FIRST SCREEN
 
 .main
 	position: absolute
 	top: 0
 	left: 0
-	background-image: url(../images/line_header.png)
-	background-size: cover
+	//background-image: url(../images/line_header.png)
+	//background-size: cover
 	position: relative
 	background-color: $header-background
-	height: 100vh
+	height: 1080px
 	overflow: hidden
 	header
 		padding-top: 62px
@@ -458,19 +504,22 @@ b, strong
 		img
 			width: 250px
 	&__letter-left
-		left: -4px
-		bottom: -103px
+		left: 0px
+		bottom: 0px
 	&__letter-right
-		top: -68px
-		right: -52px
+		top: -14px
+		right: 0px
 	&__right-background
 		position: absolute
 		top: 0
 		right: 0
-		width: 50vw	
+		width: 50%	
 		pointer-events: none
 		z-index: 0
 		opacity: .75
+		img
+			height: 100%
+	
 	// popup contact form
 
 	&__contact-form
@@ -579,6 +628,7 @@ b, strong
 						vertical-align: middle
 						font-size: 17px
 						margin-left: 25px
+						margin-bottom: 4px
 				input[type=file]
 					display: none
 				span
@@ -586,7 +636,7 @@ b, strong
 					font-family: "ProximaNovaRegular", sans-serif
 					font-size: 16px
 					line-height: 36px
-					margin-top: 5px
+					margin-top: 8px
 					color: #9ca2b4
 			.socials
 				text-align: center
@@ -641,8 +691,8 @@ b, strong
 		justify-content: center
 		background-color: #000
 		border-radius: 50%
-		width: 753.9px
-		height: 753.28px
+		width: 700px
+		height: 700px
 		z-index: 1
 		overflow: hidden
 		.logo
@@ -697,9 +747,10 @@ b, strong
 
 // SECTION SERVICES
 .services
-	background-image: url(../images/line_other.png)
-	background-repeat: repeat-y
-	background-size: contain
+	//background-image: url(../images/line_other.png)
+	//background-repeat: repeat-y
+	//background-size: contain
+	position: relative
 	height: 100%
 	.card
 		position: relative
@@ -709,6 +760,7 @@ b, strong
 		background-color: #000
 		padding-bottom: 100px
 		height: 775px
+		z-index: 2
 		&__num
 			font-family: "ProximaNovaExtraBold", sans-serif
 			font-size: 36px
@@ -751,8 +803,9 @@ b, strong
 // SECTION CLIENTS
 
 .clients
-	background-image: url(../images/line_other.png)
-	background-size: contain
+	//background-image: url(../images/line_other.png)
+	//background-size: contain
+	position: relative
 	height: 100%
 	.container
 		.row
@@ -769,7 +822,7 @@ b, strong
 			border-bottom: 2px solid #BEBEBE
 			&:first-child
 				border-top: 2px solid #BEBEBE
-			.col:not(:last-child)
+			//.col:not(:last-child)
 				border-right: 2px solid #BEBEBE
 		.hover-container
 			display: inline-block
@@ -792,11 +845,14 @@ b, strong
 
 
 .projects
-	background-image: url(../images/line_other.png)
-	background-size: contain
+	//background-image: url(../images/line_other.png)
+	//background-size: contain
 	position: relative
-	height: 100%
-	margin-bottom: 160%
+	height: 3000px
+	.v-lines
+		z-index: 1
+		&__inner:nth-child(3)
+			border-right-color: rgba(70,70,70,.5);
 	&__letter-left
 		position: absolute
 		top: 0
@@ -846,7 +902,7 @@ b, strong
 		position: absolute
 		top: 0
 		right: 0
-		width: 50.1%
+		width: 1000px
 		padding: 395px 0
 		min-height: 100%
 		.row
@@ -857,6 +913,7 @@ b, strong
 				border-bottom: 7px solid #fff
 				width: 750px
 				height: 430px
+				z-index: 1
 				.logo
 					position: absolute
 					top: 45%
@@ -882,18 +939,18 @@ b, strong
 
 .team
 	position: relative
-	margin-bottom: 400px
 	&__description
 		font-family: "ProximaNovaRegular", sans-serif
 		font-size: 18px
-		padding-right: 50%
+		padding: 0 32px
 		margin-bottom: 60px
+		margin-top: 400px
 	.top-caption
-		margin-top: 0
+		margin-top: 400px
 	&__main-worker
 		position: relative
-		width: 26.041666666666668vw
-		height: 26.041666666666668vw
+		width: 500px
+		height: 500px
 		margin: 0 auto
 		filter: grayscale(100%)
 		transition: filter .5s ease
@@ -928,16 +985,16 @@ b, strong
 	
 	&__worker
 		background-color: #F2F2F2
-		width: 13.020833333333334vw
-		height: 13.020833333333334vw
+		width: 250px
+		height: 250px
 		filter: grayscale(100%)
 		transition: filter .5s ease
 		&:hover
 			filter: grayscale(0%)
 	&__worker-black
 		background-color: #000
-		width: 13.020833333333334vw
-		height: 13.020833333333334vw
+		width: 250px
+		height: 250px
 		filter: grayscale(100%)
 		transition: filter .5s ease
 		&:hover
@@ -954,11 +1011,11 @@ b, strong
 					float: right
 					&:last-child
 						clear: both
-						margin-right: 13.020833333333334vw
+						margin-right: 250px
 			.col:nth-child(3)
 				.team__worker
 					float: right
-					margin-right: 12vw
+					margin-right: 250px
 					&:last-child
 						margin-right: 0
 						clear: both
@@ -1066,14 +1123,18 @@ b, strong
 	padding: 400px 265px 170px 265px
 	height: 100%
 	&__form-container
+		background-color: #fff
 		position: relative
 		border: 7px solid #000 
-		padding: 75px 90px 60px 90px
+		padding: 70px 90px 70px 90px
+		> .row
+			margin-bottom: 0
 		.form-caption
 			position: relative
 			font-family: "ProximaNovaSemibold", sans-serif
 			font-size: 36px
 			text-transform: uppercase
+			margin-top: 0
 			margin-left: 95px
 			margin-bottom: 90px
 			color: #202020
@@ -1086,6 +1147,10 @@ b, strong
 				width: 45px
 				height: 4px
 		form
+			> .row
+				margin-bottom: 0
+				> .row
+					margin-bottom: 0
 			input
 				font-family: "ProximaNovaRegular", sans-serif
 				font-size: 21px
@@ -1100,12 +1165,13 @@ b, strong
 					border-bottom: 1px solid #000
 					resize: none
 					margin-bottom: 34px
-					height: 185px
+					height: 150px
 				label
 					font-family: "ProximaNovaExtraBold", sans-serif
 					font-size: 24px
 					opacity: .6
 			.input-field
+				margin-bottom: 2rem
 				label
 					font-family: "ProximaNovaExtraBold", sans-serif
 					font-size: 36px
@@ -1161,23 +1227,24 @@ b, strong
 						margin-left: 25px
 		.form-description
 			position: absolute
-			top: -55px
-			right: -55px
+			top: -36px
+			right: -36px
 			background-color: #0E0E0E
 			width: 640px
-			height: 1050px
-			padding: 70px 105px
+			height: 930px
+			padding: 110px 105px
 			padding-right: 20px
 			opacity: .99
 			h1
 				font-family: "ProximaNovaSemibold", sans-serif
 				font-size: 36px
 				text-transform: uppercase
-				margin-top: 83px
+				margin-top: 0px
 				margin-bottom: 100px
 				color: #fff
 			.info-item
 				margin-bottom: 50px
+				line-height: 30px
 				h3
 					font-family: "ProximaNovaBold", sans-serif
 					font-size: 24px

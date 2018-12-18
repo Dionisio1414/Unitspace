@@ -90,6 +90,7 @@ $(function() {
 	var $closeButton = $contactForm.find('.close-btn');
 	$iconEvent.click(function() {
 		$contactForm.fadeIn();
+		return false;
 	});
 	$closeButton.click(function() {
 		$contactForm.fadeOut();
