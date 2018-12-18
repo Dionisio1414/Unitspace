@@ -119,6 +119,36 @@ $(function() {
 		}
 	})
 	
+	/* Team */
+	
+	var $hoverBlock = $(".team__main-worker"),
+		$overlayName = $hoverBlock.find(".name"),
+		$overlayPosition = $hoverBlock.find(".position");
+	$hoverBlock.hover(function() {
+		$(this).find('.overlay').animate({
+			opacity: 1
+		}, 1000);
+		$overlayName.animate({
+			bottom: 50,
+			opacity: 1
+		}, 500);
+		$overlayPosition.animate({
+			bottom: 20,
+			opacity: 1
+		}, 500);
+	}, function() {
+		$(this).find('.overlay').animate({
+			opacity: 0
+		}, 800);
+		$overlayName.animate({
+			bottom: 0,
+			opacity: 0
+		}, 500);
+		$overlayPosition.animate({
+			bottom: 0,
+			opacity: 0
+		}, 500);
+	});
 	
 	
 });

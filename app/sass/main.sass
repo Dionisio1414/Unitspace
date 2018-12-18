@@ -343,9 +343,21 @@ b, strong
 			ul
 				text-align: center
 				li
+					position: relative
 					display: inline-block
 					&:not(:last-child)
 						margin-right: 55px
+					&::before
+						content: ""
+						background-color: #fff
+						position: absolute
+						bottom: 0
+						left: 0
+						height: 2px
+						width: 0%
+						transition: all .8s ease-in-out
+					&:hover::before
+						width: 100%
 					a
 						font-family: "ProximaNovaRegular", sans-serif
 						font-size: 16px
@@ -412,9 +424,15 @@ b, strong
 				margin-top: 36px
 				a
 					display: block
-					img
+					img,
+					svg
 						width: 19px
 						height: 19px
+					svg 
+						path
+							transition: all .5s ease
+						&:hover path
+							fill: #7A7A7A
 	&__aside-right
 		position: absolute
 		top: 569px
@@ -961,8 +979,9 @@ b, strong
 		&:hover
 			filter: grayscale(0%)
 		.overlay
+			opacity: 0
 			background-image: url(../images/hover-ovarlay.png)
-			background-position: 0 15px
+			background-size: cover
 			position: absolute
 			top: 0
 			left: 0
@@ -975,17 +994,18 @@ b, strong
 				color: #fff
 			.name
 				position: absolute
-				bottom: 50px
+				bottom: 0px //50px
 				left: 32px
 				font-family: "ProximaNovaBold", sans-serif
 				font-size: 20px
+				opacity: 0
 			.position
 				position: absolute
-				bottom: 20px
+				bottom: 0px //20px
 				left: 32px
 				font-family: "ProximaNovaRegular", sans-serif
 				font-size: 18px
-	
+				opacity: 0
 	&__worker
 		background-color: #F2F2F2
 		width: 250px
@@ -1094,8 +1114,11 @@ b, strong
 			left: 0
 			top: 0
 			width: 6px
-			height: 100%
+			height: 0%
 			background-color: #fff
+			transition: all 1.5s ease-in-out
+		&:hover::before
+			height: 100%
 		h4
 			font-family: "ProximaNovaSemiBold", sans-serif
 			font-size: 24px
