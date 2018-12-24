@@ -84,6 +84,19 @@ $(function() {
 		}
 	});
 	
+	/* Main screen */
+	
+	$('.main__aside-right .scroll-link a').click(function(e) {
+		e.preventDefault();
+		var $id = $(this).attr('href'),
+			$top = $($id).offset().top;
+		
+		$('body,html').animate({scrollTop: $top + 150}, 1500);
+		console.log($(window).width())
+	});
+	
+	/*End main screen */
+	
 	// main popup form
 	
 	var $iconEvent = $('.main__popup-message img'), $contactForm = $('.main__contact-form');
@@ -96,6 +109,8 @@ $(function() {
 		$contactForm.fadeOut();
 	});
 	
+	
+	// end popup form
 	
 	/* Clients */
 	
@@ -115,7 +130,7 @@ $(function() {
 	$projectCards.each(function(i) {
 		console.log(i);
 		if(i % 2 == 0) {
-			$(this).width(500);
+			$(this).width('25vw');
 		}
 	})
 	
@@ -129,11 +144,11 @@ $(function() {
 			opacity: 1
 		}, 1000);
 		$overlayName.animate({
-			bottom: 50,
+			bottom: "2.5vw",
 			opacity: 1
 		}, 500);
 		$overlayPosition.animate({
-			bottom: 20,
+			bottom: "1vw",
 			opacity: 1
 		}, 500);
 	}, function() {

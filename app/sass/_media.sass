@@ -1,21 +1,518 @@
-//// >= 1200px
-//@media #{$extra-large-and-up} 
-//
-//// > 992px 
-//
-//@media #{$large-and-down} 
-//
-//  
-////	> 601px
-//
-//@media #{$medium-and-down} 
-//
-//	
-//// <= 600
-//@media #{$small-and-down} 
+// >= 1200px
+@media #{$extra-large-and-up}
+	
+	// v-lines responsive
+
+	.v-lines
+		width: 100vw
+		&__inner
+			width: 25vw
+		&__inner:nth-child(2)
+			left: 25vw
+		&__inner:nth-child(3)
+			left: 50vw
+		&__inner:nth-child(4)
+			left: 75vw
+
+	// end v-lines responsive
+
+
+	/* main screen */
+
+	.main 
+		height: 54vw
+		// animation circle
+		.animation-circle
+			top: 14.5vw
+			width: 35vw
+			height: 35vw
+			.logo
+				width: 18vw
+			&__one
+				top: -12.5vw
+				width: 15vw
+			&__two
+				top: -15.45vw
+				right: 20.6vw
+				width: 25vw					
+			&__third
+				top: -15.45vw
+				right: 20.6vw
+				width: 25vw
+	
+		// end animation circle
+		// header
+		header
+			padding-top: 3.1vw
+			height: 50%
+			nav
+				ul
+					li
+						&:not(:last-child)
+							margin-right: 2.75vw
+						a
+							font-size: 0.8vw
+		// end header
+
+
+		&__popup-message 
+			img
+				width: 2.15vw
+				height: 1.85vw
+				margin-right: 1.9vw
+	
+		&__aside-right
+			top: 28.45vw
+			right: 2.05vw
+			width: 4vw
+			.scroll-link
+				a
+					font-size: 0.7vw
+					letter-spacing: 0.15vw
+				&::after
+					width: 0.15vw
+					height: 3.75vw
+					bottom: -1.3vw
+					right: -2.05vw
+
+		&__bottom-container 
+			top: 35vw		
+			.header-caption
+				margin-top: 3.85vw
+				margin-left: 3vw
+				h1
+					font-size: 2.4vw
+					margin-bottom: 1.1vw
+				h2
+					font-size: 1.8vw
+					margin-bottom: 0.75vw
+				p
+					font-size: 0.85vw
+		.language
+			padding-top: 2.9vw
+			padding-left: 0.65vw
+			width: 3vw
+			height: 7.5vw
+			right: 2.7vw
+			a
+				font-size: 0.8vw
+				img
+					width: 0.5vw
+				&:last-child
+					margin-top: 0.75vw
+			
+		// letters
+		&__letter-left,		
+		&__letter-right
+			img
+				width: 12.5vw
+		&__letter-right
+			top: -0.7vw
+		// end letters	
+
+		// aside left
+
+		&__aside-left
+			position: absolute
+			top: 7.7vw
+			left: 3.65vw
+			width: 4vw
+			.follow-us
+				margin-right: 2.8vw
+				margin-bottom: 5.6vw
+				&::before
+					left: -2.85vw
+					top: -1.2vw
+					width: 0.15vw
+					height: 3.75vw
+				a
+					font-size: 0.7vw
+			.aside-item
+					margin-top: 1.8vw
+					a
+						display: block
+						img,
+						svg
+							width: 0.95vw
+							height: 0.95vw
+
+		// end aside left
+
+		// popup form
+		&__contact-form 
+			.container 
+				.row:first-child
+					margin-bottom: 0.5vw
+			.logo 
+				img
+					width: 5.4vw
+					height: 3.55vw
+			.close-btn 
+				img
+					width: 1.25vw
+			.form-container 
+				width: 31vw
+				h1
+					font-size: 1.8vw
+					margin-left: 7.25vw
+					margin-bottom: 4.5vw
+					&::before					
+						top: 0.85vw
+						left: -7.25vw
+						width: 2.25vw
+						height: 0.2vw
+				.input-field 
+					label
+						font-size: 1.8vw
+					input
+						font-size: 0.9vw
+   						margin-bottom: 0.75vw
+				.input-textarea 
+					label
+						font-size: 1.2vw
+					textarea
+						height: 9.25vw
+				.submit-btn
+					font-size: 0.7vw
+					letter-spacing: 0.15vw
+					padding: 0.75vw 1.5vw
+					img
+						width: 1vw
+						margin-left: 1vw
+						margin-bottom: 0.05vw
+				.file-upload
+					width: 11.35vw
+					height: 2.75vw
+					margin-top: 0.1vw
+					span
+						font-size: 0.8vw
+						line-height: 1.8vw
+						margin-top: 0.4vw
+					label
+						i						
+							font-size: 0.85vw
+							margin-left: 1.25vw
+							margin-bottom: 0.2vw
+				.socials 
+					li
+						margin-right: 1.75vw
+						a
+							img
+								width: 1vw
+			.form-description
+				right: 4.8vw
+				top: 25vw
+				.info-item 
+					margin-bottom: 2.5vw
+					h4
+						font-size: 1.2vw
+						letter-spacing: 0.15vw
+						margin-bottom: 0.25vw
+					p
+						font-size: 1.2vw
+		
+	
+	
+		//end popup form
+					
+
+		/* end main screen */
+		
+
+	/* Main caption */
+
+	.top-caption
+		left: 5.75vw
+		font-size: 1.8vw
+		margin-top: 13.5vw
+		&::before
+			left: -2.5vw
+			top: 0.5vw
+			width: 1.75vw
+			height: 0.15vw
+
+	/* End main caption */
+
+
+	/* Services section */
+
+	.services 
+		.card
+			padding-bottom: 5vw
+			height: 38.75vw
+			&__num
+				font-size: 1.8vw
+				top: 0.75vw
+				left: 1.25vw
+		.card-content 
+			padding-left: 5vw!important
+			.card-title
+				font-size: 1.8vw!important
+				padding-right: 10vw!important
+				line-height: 2.25vw!important
+				margin-top: 13vw!important
+				margin-bottom: 1.75vw!important
+			ul 
+				li
+					font-size: 1vw!important
+
+	/* End services section */
+
+
+	/* Clients section */
+
+
+	.clients 
+		h1.top-caption
+			margin-top: 20vw
+			margin-bottom: 7vw
+		&__slider
+			.slick-track
+				height: 31.15vw
+			.hover-container
+				height: 15vw
+				img
+					width: 14vw
+					margin: 2.5vw auto
+
+	/* End clients section */
+
+
+	/* Projects section */
+
+	.projects
+		height: 150vw
+		&__right-part
+			width: 49.5vw
+			padding: 19.75vw 0
+			.row 
+				.project-container
+					border-width: 0.35vw
+					width: 37.5vw
+					height: 21.5vw
+					.logo
+						width: 2.55vw
+						height: 2.55vw
+					.redirect-link
+						bottom: 1.5vw
+						right: 2.25vw
+						img
+							width: 1.25vw
+		&__left-part 
+			.row
+				margin-bottom: 16.5vw
+			.top-caption
+				margin-top: 16.5vw
+			.project-number
+				font-size: 1.8vw
+				margin-left: 2vw
+			h2
+				font-size: 1.8vw
+				margin-left: 4vw
+			a.go-to-site
+				font-size: 0.7vw
+				letter-spacing: 0.15vw
+				padding: 0.5vw 1vw
+				margin-left: 4vw
+				img
+					width: 1vw
+					margin-left: 1.5vw
+		&__letter-left
+			left: -2.75vw
+			img
+				width: 11.5vw
+	
+
+	/* End projects section */
+
+
+	/* Section team */
+
+	.team
+		.top-caption
+			margin-top: 20vw
+		&__description
+			font-size: 0.9vw
+			padding: 0 1.6vw
+			margin-bottom: 3vw
+			margin-top: 20vw
+		&__main-worker
+			width: 25vw
+			height: 25vw
+			.overlay 
+				.name	
+					left: 1.6vw
+					font-size: 1vw
+				.position
+					left: 1.6vw
+					font-size: 0.9vw
+		&__worker
+			width: 12.5vw
+			height: 12.5vw
+		.container:nth-child(2) 
+			.row:nth-child(1) 
+				.col:nth-child(3) 
+					.team__worker
+						margin-right: 12.5vw
+				.col:nth-child(2) 
+					.team__worker:last-child
+						margin-right: 12.5vw
+		&__worker-black
+			width: 12.5vw
+			height: 12.5vw
+
+	/* End section team */
+
+
+	/* Section technology */
+
+	.technology
+		padding: 20vw 0
+		&__letter-left
+			top: -1.25vw
+			left: -2.25vw
+			img
+				width: 12.5vw
+		.top-caption
+			margin-top: 0.65vw
+		.num-stack
+			font-size: 1.8vw
+			margin-bottom: 2.5vw
+		.block-stack
+			width: 21.25vw
+			height: 14vw
+			padding: 2vw 2vw
+			h4
+				font-size: 1.2vw
+				margin-bottom: 2vw
+			ul
+				height: 6.25vw
+				line-height: 1.5vw
+				li
+					font-size: 1vw
+
+	/* End section technology */
+
+
+	/* Section contacts */
+
+	.contacts
+		padding: 20vw 13.25vw 8.5vw 13.25vw
+		&__form-container
+			padding: 3.5vw 4.5vw 3.5vw 4.5vw
+			.form-caption
+				font-size: 1.8vw
+				margin-left: 4.75vw
+				margin-bottom: 4.5vw
+				&::before
+					top: 0.85vw
+					left: -4.75vw
+					width: 2.25vw
+					height: 0.2vw
+			form 
+				.input-field 
+					label
+						font-size: 1.8vw
+				.input-textarea 
+					label
+						font-size: 1.2vw
+					textarea
+						font-size: 1.05vw
+						margin-bottom: 1.7vw
+						height: 7.5vw
+				.submit-btn
+					font-size: 0.7vw
+					letter-spacing: 0.15vw
+					padding: 0.75vw 1.5vw
+					img
+						width: 1vw
+				.file-upload
+					width: 11.35vw
+					height: 2.5vw
+					margin-top: 0.1vw
+					span
+						font-size: 0.8vw
+						line-height: 1.8vw
+						margin-top: 0.25vw
+					label
+						i	
+							font-size: 0.85vw
+							margin-left: 1.25vw
+			.form-description
+				top: -1.8vw
+				right: -1.8vw
+				width: 32vw
+				height: 107%
+				padding: 5.5vw 5.25vw
+				padding-right: 1vw
+				h1
+					font-size: 1.8vw
+					margin-bottom: 5vw
+				.info-item
+					margin-bottom: 2.5vw
+					line-height: 1.5vw
+					h3
+						font-size: 1.2vw
+						letter-spacing: 0.15vw
+						margin-bottom: 0.25vw
+					p
+						font-size: 1.2vw
+				.socials
+					li
+						margin-right: 1.75vw
+						a
+							img
+								width: 1vw 
+					
+
+	/* End section contacts */
+
+
+	/* Footer */
+
+	footer 
+		.copyright 
+			span
+				font-size: 0.8vw
+
+	/* End footer */
+
+
+// > 992px 
+
+@media #{$large-and-down} 
+
+  
+//	> 601px
+
+@media #{$medium-and-down} 
+
+	
+// <= 600
+@media #{$small-and-down} 
 
   
   
+
+@media screen and (max-width: 1600px)
+	/* main screen */
+	.main 
+		&__aside-left
+			.follow-us
+				&::before
+					top: -0.9vw
+		&__aside-right 
+			.scroll-link
+				&::after
+					bottom: -1.1vw
+	/* end main screen */
+
+
+@media screen and (max-width: 1366px)
+	.main
+		&__aside-right 
+			.scroll-link::after
+				bottom: -1vw
 
 @media screen and (max-width: 992px) 
 	.coming-soon 
