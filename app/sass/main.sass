@@ -758,6 +758,7 @@ b, strong
 .pd-0
 	padding: 0!important
 
+
 //.bg-lines
 //	background-image: url(../images/line_other.png)
 //	background-repeat: repeat-y
@@ -852,9 +853,9 @@ b, strong
 			height: 623px
 		.row
 			margin-bottom: 0
-			border-bottom: 2px solid #BEBEBE
+			border-bottom: .5px solid #e1e1e1
 			&:first-child
-				border-top: 2px solid #BEBEBE
+				border-top: .5px solid #e1e1e1
 			//.col:not(:last-child)
 				border-right: 2px solid #BEBEBE
 		.hover-container
@@ -1022,6 +1023,7 @@ b, strong
 				font-size: 18px
 				opacity: 0
 	&__worker
+		position: relative
 		background-color: #F2F2F2
 		width: 250px
 		height: 250px
@@ -1029,6 +1031,34 @@ b, strong
 		transition: filter .5s ease
 		&:hover
 			filter: grayscale(0%)
+		.overlay
+			opacity: 0
+			background-image: url(../images/hover-ovarlay.png)
+			background-size: cover
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			p
+				margin-bottom: 0
+				color: #fff
+			.name
+				position: absolute
+				bottom: 0px //40px
+				left: 20px
+				font-family: "ProximaNovaBold", sans-serif
+				font-size: 20px
+				opacity: 0
+			.position
+				position: absolute
+				bottom: 0px //15px
+				left: 20px
+				font-family: "ProximaNovaRegular", sans-serif
+				font-size: 18px
+				opacity: 0
 	&__worker-black
 		background-color: #000
 		width: 250px

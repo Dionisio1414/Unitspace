@@ -166,4 +166,34 @@ $(function() {
 	});
 	
 	
+	var $hoverBlockSecond = $(".team__worker"),
+		$overlayNameSecond = $hoverBlockSecond.find(".name"),
+		$overlayPositionSecond = $hoverBlockSecond.find(".position");
+	$hoverBlockSecond.hover(function() {
+		$(this).find('.overlay').animate({
+			opacity: 1
+		}, 1000);
+		$overlayNameSecond.animate({
+			bottom: "2vw",
+			opacity: 1
+		}, 500);
+		$overlayPositionSecond.animate({
+			bottom: "0.75vw",
+			opacity: 1
+		}, 500);
+	}, function() {
+		$(this).find('.overlay').animate({
+			opacity: 0
+		}, 800);
+		$overlayNameSecond.animate({
+			bottom: 0,
+			opacity: 0
+		}, 500);
+		$overlayPositionSecond.animate({
+			bottom: 0,
+			opacity: 0
+		}, 500);
+	});
+	
+	
 });
