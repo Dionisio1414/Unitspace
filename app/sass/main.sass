@@ -292,7 +292,7 @@ b, strong
 		position: absolute
 		top: 0
 		height: 100%
-		border-left: 1px solid rgba(#464646,.5)
+		//border-left: 1px solid rgba(#464646,.5)
 		border-right: 1px solid rgba(#464646,.5)
 		margin: 0 auto
 		z-index: 1
@@ -484,8 +484,9 @@ b, strong
 				vertical-align: middle
 			&:last-child
 				font-family: "RobotoNovaRegular", sans-serif
-				margin-top: 15px
-				display: none
+				//margin-top: 15px
+				display: block
+				opacity: 0
 		
 	
 	&__bottom-container
@@ -856,6 +857,9 @@ b, strong
 			border-bottom: .5px solid #e1e1e1
 			&:first-child
 				border-top: .5px solid #e1e1e1
+			&:last-child
+				border-bottom: none
+	
 			//.col:not(:last-child)
 				border-right: 2px solid #BEBEBE
 		.hover-container
@@ -871,6 +875,11 @@ b, strong
 			img
 				width: 280px
 				margin: 50px auto
+	.v-lines
+		&__top-line
+			background-color: rgba(70,70,70,.2)
+			top: auto
+			bottom: .5vw
 
 // END SECTION CLIENTS 
 

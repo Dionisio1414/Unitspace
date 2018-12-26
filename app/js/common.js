@@ -63,7 +63,17 @@ $(function() {
 	/* HEADER */
 	
 	$('.main .language a').click(function() {
-		$(this).next().fadeToggle();
+		var $nextLang = $(this).next();
+		if(!$nextLang.hasClass('showing')) {
+			$nextLang.addClass('showing').animate({
+				opacity: 1
+			}, 1000);
+		} else {
+			$nextLang.removeClass('showing').animate({
+				opacity: 0
+			}, 500);
+		}
+
 		return false;
 	});
 	
@@ -91,7 +101,7 @@ $(function() {
 		var $id = $(this).attr('href'),
 			$top = $($id).offset().top;
 		
-		$('body,html').animate({scrollTop: $top + 150}, 1500);
+		$('body,html').animate({scrollTop: $top}, 1500);
 		console.log($(window).width())
 	});
 	
