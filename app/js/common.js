@@ -105,12 +105,12 @@ $(function() {
 			$hdr.addClass('fixed');
 			$logo.show().animate({
 				opacity: 1
-			}, 500);
+			}, 300);
 		} else {
 			$hdr.removeClass('fixed');
 			$logo.hide().animate({
 				opacity: 0
-			});
+			}, 200);
 		}
 	});
 	
@@ -169,7 +169,8 @@ $(function() {
 	var $hoverBlock = $(".team__main-worker"),
 		$overlayName = $hoverBlock.find(".name"),
 		$overlayPosition = $hoverBlock.find(".position");
-	$hoverBlock.hover(function() {
+	$hoverBlock.hover(function(e) {
+		e.preventDefault();
 		$(this).find('.overlay').animate({
 			opacity: 1
 		}, 1000);
@@ -199,7 +200,8 @@ $(function() {
 	var $hoverBlockSecond = $(".team__worker"),
 		$overlayNameSecond = $hoverBlockSecond.find(".name"),
 		$overlayPositionSecond = $hoverBlockSecond.find(".position");
-	$hoverBlockSecond.hover(function() {
+	$hoverBlockSecond.hover(function(e) {
+		e.preventDefault();
 		$(this).find('.overlay').animate({
 			opacity: 1
 		}, 1000);
