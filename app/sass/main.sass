@@ -269,6 +269,27 @@ b, strong
 	
 /* --- END COMING SOON PAGE  ---  */
 
+
+// custom cursor
+
+.wrapper
+	position: relative
+	.us-cursor
+		position: absolute
+		border: 3px solid #fff
+		border-radius: 50%
+		width: 35px
+		height: 35px
+		margin: -25px 0 0 -25px
+		transition: top .2s, left .2s
+		z-index: 99
+
+// end custom cursor
+
+
+
+
+
 // container-fluid
 
 .container
@@ -371,6 +392,40 @@ b, strong
 			margin-left: 38px
 			width: 20%
 			opacity: 0
+		// hamburger-menu
+		.us-hamburger
+			//display: none
+			width: 44px
+			height: 22px
+			position: relative
+			top: 43px
+			left: 92%
+			transform: rotateY(180deg)
+			cursor: pointer
+			span
+				display: block
+				position: absolute
+				left: 0
+				height: 3px
+				width: 100%	
+				background-color: #fff
+				border-radius: 2px
+				opacity: 1
+				transform: rotate(0deg)
+				transition: .3s ease-in-out
+				&:nth-child(1)
+					top: 0
+				&:nth-child(2), 
+				&:nth-child(3)
+					top: 9px
+				&:nth-child(4)
+					top: 18px
+					width: 70%
+					right: 0
+	
+		// end hamburger menu
+
+
 	header.fixed
 		background-color: #000
 		position: fixed
@@ -879,7 +934,7 @@ b, strong
 		&__top-line
 			background-color: rgba(70,70,70,.2)
 			top: auto
-			bottom: .5vw
+			bottom: 0
 
 // END SECTION CLIENTS 
 

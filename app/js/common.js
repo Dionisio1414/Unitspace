@@ -59,6 +59,26 @@ $(function() {
 	
 	
 
+	// custom cursor
+	
+	var $x = $y = 0;
+	function move() {
+		$('.us-cursor').css({
+			left: $x + 'px',
+			top: $y + 'px'
+		});
+	}
+	
+	$(document).on('mousemove', function(e) {
+		$x = e.clientX;
+		$y = e.clientY;
+		return false;
+	});
+	
+	setInterval(move, 100);
+	
+	// end custom cursor
+	
 	
 	/* HEADER */
 	
@@ -81,7 +101,7 @@ $(function() {
 	
 	$(window).scroll(function() {
 		var $hdr = $('header'), $logo = $hdr.find('.logo-fixed');
-		if($(this).scrollTop() > 10) {
+		if($(this).scrollTop() > 10 && $(this).width() > 600) {
 			$hdr.addClass('fixed');
 			$logo.show().animate({
 				opacity: 1

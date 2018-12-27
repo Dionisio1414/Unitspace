@@ -53,11 +53,13 @@
 						a
 							font-size: 0.8vw
 		header.fixed
-			height: 85px 
+			height: 6.4vw 
 			.main__popup-message 
-				margin-top: 2vw
+				margin-top: 2.5vw
 			.logo-fixed
 				margin-top: 2vw
+			nav
+				margin-top: 2.5vw
 				
 	
 		// end header
@@ -1408,9 +1410,155 @@
 	
 // <= 600
 @media #{$small-and-down} 
+	
+	// v-lines
 
+	.v-lines
+		display: none
+
+	// end v-lines
+
+
+	/* Home page */  
+
+	.main 
+		height: 100vh
+		header 
+			nav
+				display: none
+			.logo-fixed
+				display: none
+		&__aside-right
+			display: none
+		.animation-circle
+			top: 218px
+			background-color: transparent
+			width: 100%
+			height: 100%
+			border-radius: 0
+			pointer-events: none
+			.logo
+				width: 357px
+				height: 144px
+			&__one,
+			&__two,
+			&__third
+				display: none
+		&__aside-left
+			height: 100%
+			top: 0
+			left: 0
+			width: 70px
+			background-color: #111
+			width: 70px
+			z-index: 1
+			.follow-us
+				margin-right: 0
+				margin-bottom: 0
+				margin-top: 178px
+				&::before
+					left: -58px
+					top: -24px !important
+					width: 3px
+					height: 73px
+				a
+					font-size: 14px
+			.aside-item.fh
+				margin-top: 96px
+			.aside-item 
+				margin-top: 30px
+				margin-left: 27px
+				a 
+					display: inline-block
+					svg, 
+					img
+						width: 20px
+						height: 20px
+		&__right-background
+			width: 100%
+			height: 100%
+			img
+				height: 100%
+		.language
+			background-color: transparent
+			width: 50px
+			height: auto
+			padding-top: 0
+			padding-left: 0
+			right: 10px
+			bottom: 20px
+			a
+				font-size: 16px
+				img
+					width: 10px
+					vertical-align: initial
+		&__popup-message 
+			margin-right: 60px
+			margin-top: 38px
+			img
+				width: 40px
+				height: 40px
+				margin-right: 10px
+				margin-top: 0
+	
+		&__bottom-container
+			top: 747px
+			left: 104px
+			.header-caption
+				margin: 0
+				h1
+					font-size: 36px
+					margin-top: 0
+					margin-bottom: 16px
+				h2
+					font-size: 30px
+					margin-bottom: 5px
+				p
+					font-size: 15px
+					margin-bottom: 0
+		&__letter-left, 
+		&__letter-right 
+			img
+				width: 200px
+		&__letter-right 
+			top: -20px
+			right: -20px
+		&__letter-left
+			bottom: -60px
+			left: 50px
+	
+
+	/* End home page */  
   
-  
+
+	/* Services section */
+
+	.services 
+		.card
+			width: 100%
+			height: 100vh	
+			margin: 0
+			&__num
+				font-size: 41px
+				top: 10px
+				left: 20px
+			.card-content 
+				.card-title
+					font-size: 42px !important
+					line-height: 40px!important
+					margin-top: 50%!important
+					margin-left: 25% !important
+					margin-bottom: 25px!important
+					width: 50vw
+				ul
+					line-height: 35px
+					margin-left: 25%
+					li
+						font-size: 24px !important
+
+	/* End services section */
+
+
 
 @media screen and (max-width: 1600px)
 	/* main screen */
