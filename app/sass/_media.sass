@@ -584,15 +584,19 @@
 						a
 							font-size: 1vw
 
-		header.fixed 
-			height: 8vw
-			nav
-				margin-top: 2.5vw
+		header.fixed
+			height: 4vw 
+			.main__popup-message 
+				margin-top: .9vw
+				img
+					margin-top: 0
 			.logo-fixed
-				margin-top: 2vw
-				width: 3.5vw
-			.main__popup-message
-				margin-top: 2vw
+				margin-top: .9vw
+				margin-left: .9vw
+				width: 40%
+			nav
+				margin-top: .7vw
+				
 	
 		// end header
 
@@ -663,16 +667,17 @@
 					letter-spacing: 1.0.727vw
 		.language
 			padding-top: 2.182vw
-			padding-left: 0.818vw
+			padding-left: .6vw
 			width: 3.182vw
 			height: 7.545vw
 			right: 5.091vw
 			a
-				font-size: 0.909vw
+				font-size: 1vw
 				img
-					width: 0.364vw
+					width: .47vw
+					vertical-align: super
 				&:last-child
-					margin-top: 1.364vw
+					margin-top: 0
 	
 	
 		// letters
@@ -736,26 +741,27 @@
 					font-family: "ProximaNovaBold", sans-serif
 					font-size: 10px
 					letter-spacing: 1px
-					padding: 9px 16px
+					padding: 9px 13px
 					margin-left: 13px
 					img
 						width: 15px
-						margin-left: 18px
-						margin-bottom: 4px
+						margin-left: 10px
+						margin-bottom: 3px
 				.file-upload
 					float: none
-					width: 11.35vw
-					height: 2.75vw
-					margin-top: 0.1vw
+					width: auto
+					height: 31px
+					margin-top: 2px
+					margin-right: 10px
 					span
-						font-size: 0.8vw
+						font-size: 10px
 						line-height: 1.8vw
-						margin-top: 0.4vw
+						margin-top: 6px
 					label
 						i						
-							font-size: 0.85vw
-							margin-left: 1.25vw
-							margin-bottom: 0.2vw
+							font-size: 10px
+							margin-left: 10px
+							margin-bottom: 1.2px
 				.socials
 					text-align: left
 					li
@@ -874,15 +880,19 @@
 				margin-bottom: 1.545vw
 			a.go-to-site
 				font-family: "ProximaNovaBold", sans-serif
-				font-size: 0.909vw
+				font-size: 1vw
 				letter-spacing: 0.15vw
 				padding: 1.091vw
+				padding-top: 1vw
+				padding-bottom: .8vw
 				margin-left: 1vw
 				width: 97%
 				text-align: center
 				img
 					width: 1.5vw
-					margin-left: 3.5vw
+					margin-left: 1.5vw
+					vertical-align: middle
+					margin-bottom: .25vw
 		&__letter-left
 			left: -2.75vw
 			margin-top: 1.818vw
@@ -990,11 +1000,11 @@
 	.contacts
 		padding: 20vw 5.25vw 12.5vw 5.25vw
 		&__form-container
-			padding: 5vw 0 3.5vw 5vw
+			padding: 3.5vw 0 3.5vw 5vw
 			.form-caption
 				font-size: 1.8vw
 				margin-left: 8.75vw
-				margin-bottom: 4.5vw
+				margin-bottom: 1.5vw
 				&::before
 					top: 0.85vw
 					left: -8.75vw
@@ -1019,41 +1029,42 @@
 					font-size: 10px
 					letter-spacing: 0.15vw
 					padding: 1.2vw 2.3vw
+					padding-bottom: .9vw
 					margin-left: 12px
 					img
-						width: 1vw
+						width: 1.4vw
 				.file-upload
 					width: 14.35vw
-					height: 3vw
-					margin-top: .45vw
+					height: 3.5vw
+					margin-top: 0
 					span
-						font-size: 1vw
+						font-size: 1.3vw
 						line-height: 1.8vw
-						margin-top: 0.45vw
+						margin-top: 0.75vw
 					label
 						i	
-							font-size: 0.85vw
-							margin-left: 1.25vw
+							font-size: 1.3vw
+							margin-left: 0.25vw
 			.form-description
-				top: -2vw
+				top: -1.9vw
 				right: -5vw
 				width: 37vw
 				height: 107%
-				padding: 6.7vw 6.25vw
+				padding: 5.7vw 6.25vw
 				padding-right: 1vw
 				opacity: 1
 				h1
 					font-size: 1.8vw
-					margin-bottom: 7vw
+					margin-bottom: 4vw
 				.info-item
-					margin-bottom: 50px
-					line-height: 1.5vw
+					margin-bottom: 3vw
+					line-height: 1.8vw
 					&:last-child
 						margin-bottom: 23px
 					h3
 						font-size: 16px
 						letter-spacing: 2px
-						margin-bottom: 13px
+						margin-bottom: .5vw
 					p
 						font-size: 1.2vw
 				.socials
@@ -1061,7 +1072,7 @@
 						margin-right: 20px
 						a
 							img
-								width: 1vw 
+								width: 1.3vw 
 					
 
 	/* End section contacts */
@@ -1119,6 +1130,8 @@
 							margin-right: 2.264vw
 						a
 							font-size: 1.09vw
+			.us-hamburger
+				display: block	
 		header.fixed 
 			height: 65px
 			nav
@@ -1137,7 +1150,7 @@
 		&__popup-message 
 			img
 				width: 2.5vw
-				height: 2.28vw
+				height: 2.28vw	
 	
 		&__aside-right
 			right: 3vw
@@ -1426,9 +1439,24 @@
 
 	// end v-lines
 
+	// top-caption
+
+	.top-caption
+		left: 50%
+		font-size: 30px
+		margin-top: 0
+		margin-bottom: 0
+		text-align: center
+		&::before
+			left: -50px
+			top: 10px
+			width: 35px
+			height: 3px
+
+
+	// end top-caption
 
 	/* Home page */  
-
 	.main 
 		height: 100vh
 		header 
@@ -1439,15 +1467,17 @@
 		&__aside-right
 			display: none
 		.animation-circle
-			top: 218px
+			top: 107px
+			left: 52.5%
 			background-color: transparent
 			width: 100%
 			height: 100%
 			border-radius: 0
 			pointer-events: none
 			.logo
-				width: 357px
-				height: 144px
+				width: 62.5vw
+				height: auto
+				margin-top: 0
 			&__one,
 			&__two,
 			&__third
@@ -1456,37 +1486,41 @@
 			height: 100%
 			top: 0
 			left: 0
-			width: 70px
+			width: 55px
 			background-color: #111
-			width: 70px
 			z-index: 1
 			.follow-us
 				margin-right: 0
 				margin-bottom: 0
-				margin-top: 178px
+				margin-top: 150px
+				opacity: .4
 				&::before
 					left: -58px
 					top: -24px !important
 					width: 3px
 					height: 73px
 				a
-					font-size: 14px
+					font-size: 12px
 			.aside-item.fh
-				margin-top: 96px
+				margin-top: 80px
 			.aside-item 
-				margin-top: 30px
-				margin-left: 27px
+				margin-top: 17px
+				margin-left: 21px
 				a 
 					display: inline-block
 					svg, 
 					img
-						width: 20px
+						width: 13px
 						height: 20px
 		&__right-background
 			width: 100%
 			height: 100%
 			img
-				height: 100%
+				display: none
+				height: auto
+			.mobile-home-bg
+				width: 100%
+				display: block
 		.language
 			background-color: transparent
 			width: 50px
@@ -1496,44 +1530,44 @@
 			right: 10px
 			bottom: 20px
 			a
-				font-size: 16px
+				font-size: 14px
 				img
-					width: 10px
+					width: 9px
 					vertical-align: initial
 		&__popup-message 
-			margin-right: 60px
-			margin-top: 38px
+			margin-right: 17.75vw
+			margin-top: 27px
 			img
-				width: 40px
-				height: 40px
-				margin-right: 10px
+				width: 30px
+				height: auto
+				margin-right: 0
 				margin-top: 0
 	
 		&__bottom-container
-			top: 747px
-			left: 104px
+			top: 123.438vw
+			left: 14.375vw
 			.header-caption
 				margin: 0
 				h1
-					font-size: 36px
+					font-size: 6.25vw
 					margin-top: 0
-					margin-bottom: 16px
+					margin-bottom: 10px
 				h2
-					font-size: 30px
+					font-size: 6.25vw
 					margin-bottom: 5px
 				p
-					font-size: 15px
+					font-size: 3.125vw
 					margin-bottom: 0
 		&__letter-left, 
 		&__letter-right 
 			img
-				width: 200px
+				width: 150px
 		&__letter-right 
-			top: -20px
-			right: -20px
+			top: -30px
+			right: -13px
 		&__letter-left
-			bottom: -60px
-			left: 50px
+			bottom: -40px
+			left: 25px
 	
 
 	/* End home page */  
@@ -1544,28 +1578,225 @@
 	.services 
 		.card
 			width: 100%
-			height: 100vh	
+			height: 550px	
 			margin: 0
 			&__num
-				font-size: 41px
-				top: 10px
-				left: 20px
+				font-size: 30px
+				top: 20px
+				left: 8%
 			.card-content 
 				.card-title
-					font-size: 42px !important
+					font-size: 30px !important
 					line-height: 40px!important
 					margin-top: 50%!important
-					margin-left: 25% !important
+					margin-left: 8% !important
 					margin-bottom: 25px!important
 					width: 50vw
 				ul
-					line-height: 35px
-					margin-left: 25%
+					line-height: 32px
+					margin-left: 8%
 					li
-						font-size: 24px !important
+						font-size: 18px!important
+		.second-card,
+		.third-card,
+		.four-card
+			top: 0
 
 	/* End services section */
+	.border-b
+		border-bottom: .5px solid #e1e1e1!important
+	.border-r
+		border-right: .5px solid #e1e1e1
+	.border-t
+		border-top: .5px solid #e1e1e1
+	.border-l
+		border-left: .5px solid #e1e1e1
+	.pd-slider
+		padding: 0!important
+	.dn
+		display: none
+	
 
+	/* Section clients */
+	.clients
+		.arrows
+			width: 100%
+			display: inline-block
+			li.prev
+				float: left
+			li.next
+				float: right
+		&__slider
+			.slick-track
+				height: 90vw
+			.hover-container 
+				height: 40vw
+				img
+					width: 80%
+					margin: 7.455vw auto
+		.slider-hidden
+			display: none
+	/* End section clients */
+
+	/* Section techology */
+	.mt-0
+		margin-top: 0!important
+	.technology 
+		.num-stack
+			font-size: 26px
+			margin-bottom: 20px
+			margin-top: 60px
+			margin-left: 7vw
+		.block-stack
+			width: 80%
+			height: 50vw
+			padding: 8vw 8vw
+			margin-left: 7vw
+			h4
+				font-size: 20px
+				margin-bottom: 10px
+			ul
+				height: 30vw
+				line-height: 19px
+				li
+					font-size: 14px
+		&__letter-left
+			top: 0
+			left: -15px
+			img
+				width: 100%
+
+	/* End section techology */
+
+
+
+	/* Projects section */
+
+	.projects
+		&__left-part
+			display: none
+		&__right-part 
+			padding: 0 3.5vw
+			width: 100%
+			.row
+				margin-bottom: 20vw
+			.mobile-caption
+				display: block
+				font-family: "ProximaNovaSemibold", sans-serif
+				font-size: 24px
+				margin-bottom: 15px
+				color: #fff
+				text-align: center
+		.row 
+			.project-container	
+				height: 75vw
+				width: 100%
+				border-width: initial
+				border-width: 5px
+				.logo
+					width: auto
+					img
+						width: 10.55vw
+						height: 10.55vw
+				.redirect-link
+					display: none
+
+	/* End projects section */
+
+
+	/* Team section */
+
+	.team
+		&__main-worker
+			width: 90%
+			height: 84.375vw
+			margin: 0 auto!important
+			.overlay
+				.name
+					font-size: 5vw
+					left: 6.25vw
+					bottom: 8.5vw!important
+				.position
+					font-size: 5vw
+					left: 6.25vw
+					bottom: 2vw!important					
+		&__description
+			font-size: 18px
+			padding: 0px 9.6vw
+			padding-left: 5vw
+			margin-bottom: 10vw
+			margin-top: 10vw
+		&__worker
+			width: 44.875vw
+			height: 44.875vw
+			.overlay
+				.name
+					font-size: 5vw
+					left: 6.25vw
+					bottom: 8.5vw!important
+				.position
+					font-size: 5vw
+					left: 6.25vw
+					bottom: 2vw!important	
+		&__worker-black
+			width: 44.875vw
+			height: 44.875vw
+		.container:nth-child(2) 
+			.row:nth-child(1) 
+				.col:nth-child(2) 
+					.team__worker
+						float: left
+						margin-left: 5vw
+						clear: left
+						&:last-child
+							display: none
+				.col:nth-child(3) 
+					.team__worker
+						display: none
+			.row:nth-child(2) 
+				.col:nth-child(1)
+					.team__worker
+						display: none
+				.col:nth-child(2)
+					display: unset
+					.team__worker
+						display: none
+						&:last-child
+							display: block
+							float: right
+							margin-right: 5vw
+				.col:nth-child(3)
+					.team__worker
+						display: none
+				.col:nth-child(4)
+					.team__worker-black
+						display: none
+			.row:nth-child(3) 
+				.col:nth-child(1) 
+					.team__worker
+						float: left
+						margin-left: 5vw
+				.col:nth-child(2) 
+					.team__worker
+						float: right
+						margin-right: 5vw
+					.team__worker-black
+						clear: both
+						margin-left: 5vw
+
+	/* End team section */
+
+	
+	/* Contacts section */
+
+	.contacts
+		&__form-container
+			border: none
+			padding: 0
+			.form-description
+				display: none
+	
+	/* End contacts section */
 
 
 @media screen and (max-width: 1600px)

@@ -144,7 +144,20 @@ $(function() {
 	
 	/* Clients */
 	
-	$('.clients__slider').slick();
+	$('.clients__slider').slick({
+		prevArrow: $('.arrows .prev'),
+		nextArrow: $('.arrows .next'),
+		responsive: [
+			{
+			  breakpoint: 600,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+
+		  ]
+	});
 	
 //		var $spriteContainer = $('.clients__slider .hover-container');
 //		var $imgWidth = $spriteContainer.find('img');
@@ -159,7 +172,7 @@ $(function() {
 	var $projectCards = $('.projects__right-part .row .project-container');
 	$projectCards.each(function(i) {
 		console.log(i);
-		if(i % 2 == 0) {
+		if(i % 2 == 0 && $(window).width() > 600) {
 			$(this).width('25vw');
 		}
 	})
